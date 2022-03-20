@@ -1,0 +1,198 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body *, html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+.bar {
+  margin-top: 150px;
+  position: absolute;
+  left: 34.8%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  float: left;
+  -webkit-animation: rotateX 5s linear infinite;
+          animation: rotateX 5s linear infinite;
+}
+@-webkit-keyframes rotateX {
+  0% {
+    transform: translate(-50%, -50%) rotateX(0);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateX(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes rotateX {
+  0% {
+    transform: translate(-50%, -50%) rotateX(0);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateX(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+.bar:nth-of-type(2) {
+  margin-left: 1.5em;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.bar:nth-of-type(3) {
+  margin-left: 3em;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.bar:nth-of-type(4) {
+  margin-left: 4.5em;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.bar:nth-of-type(5) {
+  margin-left: 6em;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.bar:nth-of-type(6) {
+  margin-left: 7.5em;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.bar:nth-of-type(7) {
+  margin-left: 9em;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.bar:nth-of-type(8) {
+  margin-left: 10.5em;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.bar:nth-of-type(9) {
+  margin-left: 12em;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.bar:nth-of-type(10) {
+  margin-left: 13.5em;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.bar:nth-of-type(11) {
+  margin-left: 15em;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.bar:nth-of-type(12) {
+  margin-left: 16.5em;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.bar:nth-of-type(13) {
+  margin-left: 18em;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.bar:nth-of-type(14) {
+  margin-left: 19.5em;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+.bar:nth-of-type(15) {
+  margin-left: 21em;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.bar:nth-of-type(16) {
+  margin-left: 22.5em;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.bar:nth-of-type(17) {
+  margin-left: 24em;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+.bar:nth-of-type(18) {
+  margin-left: 25.5em;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+.bar:nth-of-type(19) {
+  margin-left: 27em;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+.bar:nth-of-type(20) {
+  margin-left: 28.5em;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.bar:nth-of-type(21) {
+  margin-left: 30em;
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s;
+}
+.bar:nth-of-type(22) {
+  margin-left: 31.5em;
+  -webkit-animation-delay: 4.4s;
+          animation-delay: 4.4s;
+}
+.bar:nth-of-type(23) {
+  margin-left: 33em;
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s;
+}
+.bar:nth-of-type(24) {
+  margin-left: 34.5em;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+.bar:nth-of-type(25) {
+  margin-left: 36em;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.bar:nth-of-type(26) {
+  margin-left: 37.5em;
+  -webkit-animation-delay: 5.2s;
+          animation-delay: 5.2s;
+}
+.bar:nth-of-type(27) {
+  margin-left: 39em;
+  -webkit-animation-delay: 5.4s;
+          animation-delay: 5.4s;
+}
+.bar:nth-of-type(28) {
+  margin-left: 41.5em;
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s;
+}
+.bar:nth-of-type(29) {
+  margin-left: 42em;
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+}
+.bar div:nth-of-type(1), .bar div:nth-of-type(3) {
+  height: 20px;
+  width: 20px;
+  background: #FF5722;
+  border-radius: 50%;
+}
+.bar div:nth-of-type(2) {
+  height: 150px;
+  width: 10px;
+  background: #FF5722;
+  border-radius: 50px;
+  margin: 0.3em 0 0.3em 5px;
+}

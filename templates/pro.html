@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- linking bootstrap -->
+
+
+ 
+  <script src="{{url_for('static', filename='Bootstrap5/bootstrap.js')}}">
+
+  </script>
+
+
+
+  <link rel="stylesheet" href="{{url_for('static', filename='Bootstrap5/bootstrap.css')}}">
+  <style>
+    
+  </style>
+
+  <title>Page</title>
+</head>
+<body>
+  <div class="container">
+
+    
+    
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-lg bg-secondary bg-opacity-25">
+              {% for row in data %}
+              
+
+              <img src="{{p}}" class=" rounded-circle  mx-auto d-block mt-2"  width="120px" height="120px"  alt="sdsd" >
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center text-center mt-1">
+                    <h2>{{ row[1] }}</h2>
+                  </div>
+                </div>
+              <div class="card-body">
+                <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p> -->
+                  
+                  <h4>Address: </h4>
+                  <p>{{ row[3] }}</p>
+                  <h4>Phone No: </h4>
+                  <p>{{row[2]}}</p>
+                  {{row[4]}}
+                  
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a type="button"  href="/delete/{{ row[0]}}" class="btn btn-sm btn-danger">Delete</a>
+                    <a type="button" href="/update/{{ row[0]}}" class="btn btn-sm btn-warning">Edit</a>
+                  </div>
+                  
+                  <small class="text-muted">9 mins</small>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+         
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

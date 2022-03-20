@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='Tables/images/icons/favicon.ico')}}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Tables/vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Tables/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Tables/vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Tables/vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Tables/vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Tables/css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Tables/css/main.css')}}">
+<!--===============================================================================================-->
+<style>
+	.bdygrd{background-color: #85FFBD;
+		background-image: linear-gradient(45deg, #5fdd9a 0%, #ddd962 100%);}
+</style>
+<body class="bdygrd">
+	<div class=" bgcolor  p-5 rounded mt-3  mt-2  shadow-lg ">
+		<h1>Processed Data</h1>
+		<h6 class="lead mt-3"></h6>
+	  </div>
+	
+	<div class="limiter">
+		<!-- <div class="container-table100"> -->
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head" >
+								<th class="column1">Index</th>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<th class="column2">&nbsp;&nbsp;&nbsp;Header</th>
+								<th class="column3">Sequence</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% if csdata|length == 0 %}
+							<tr>
+								<td>No Data</td>
+								<td></td>
+								<td></td>
+								
+							  </tr>
+								{% else %}
+								{% for row in csdata %}
+								<td> {{row[0]}} </td>
+								 <td  >{{row[1]}}</td>
+								 <td  >{{row[2]}}</td>
+								 
+					  
+							  </tr>
+								  {% endfor %}
+								{% endif%}   
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+
+	<script src="{{url_for('static', filename='Tables/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+
+	<script src="{{url_for('static', filename='Tables/vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{url_for('static', filename='Tables/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+	
+<!--===============================================================================================-->
+
+	<script src="{{url_for('static', filename='Tables/vendor/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename='Tables/js/main.js')}}"></script>
+
+</body>
+</html>

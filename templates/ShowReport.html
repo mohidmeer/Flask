@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- linking bootstrap -->
+
+  <script src="{{url_for('static', filename='Bootstrap5/bootstrap.js')}}"></script>
+
+
+  <script src="{{url_for('static', filename='Bootstrap5/jquery.js')}}"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='Bootstrap5/bootstrap.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='Bootstrap5/animate.css')}}">
+  <style>
+    .bgcolor {
+      background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #5fdd9a 0%, #ddd962 100%);
+    }
+
+    .btninp {
+      color: blue;
+    }
+
+    .prg {
+      background-color: #216842;
+    }
+
+    .bdy {
+      background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    }
+
+    .btn-outline-custom {
+      color: #216842;
+      border-color: #216842;
+    }
+  </style>
+
+  <title>Page</title>
+</head>
+
+<body class="bdy">
+ <div class="container">
+   <h2>Requested Report</h2>
+  <div class="row mt-3">
+      
+    <img src="{{p}}" alt="" width="50%" height="50%">
+</div>
+
+
+ </div>
+    
+    
+
+</body>
+
+</html>

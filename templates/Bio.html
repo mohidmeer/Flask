@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- linking bootstrap -->
+
+  <script src="{{url_for('static', filename='Bootstrap5/bootstrap.js')}}"></script>
+
+
+  <script src="{{url_for('static', filename='Bootstrap5/jquery.js')}}"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='Bootstrap5/bootstrap.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='Bootstrap5/animate.css')}}">
+  <style>
+    .bgcolor {
+      background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #5fdd9a 0%, #ddd962 100%);
+    }
+
+    .btninp {
+      color: blue;
+    }
+
+    .prg {
+      background-color: #216842;
+    }
+
+    .bdy {
+      background-color: #85FFBD;
+      background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    }
+
+    .btn-outline-custom {
+      color: #216842;
+      border-color: #216842;
+    }
+  </style>
+
+  <title>Page</title>
+</head>
+
+<body class="bdy">
+  {% for message in get_flashed_messages()%}
+   <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Hola</strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+   </div>
+ 
+  {% endfor%}
+
+  <div class="container">
+    <div class="row">
+        <div class=" bgcolor  p-5 rounded mt-3  mt-2  shadow-lg ">
+          <h1>Upload Fasta Files Here</h1>
+          <h6 class="lead mt-3">After Processing You Will Be Provided Link To View Results</h6>
+          <form action="/subfasta" method="post" enctype="multipart/form-data"  onsubmit="return do_something()" >
+            <input class="form-control form-control-lg mt-2" id="formFileLg" type="text" name="name" placeholder="Name" required>
+            <input class="form-control form-control-lg mt-2" id="formFileLg" type="file" name="fasta" required>
+            
+            
+            <button name="save" type="submit" id="animate" value="save" class="btn btn-outline-custom mt-3">Submit</button>
+          </form>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th >Id</th>
+                  <th>Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                  {% if data|length == 0 %}
+                <tr>
+                  <td>No Data</td>
+                  <td></td>
+                  <td></td>
+                  
+                </tr>
+                  {% else %}
+                <tr>
+                    {% for row in data %}
+                  <td>{{ row[0]}}</td>
+                  <td>{{ row[1]}}</td>
+                  <td >
+                    <div>
+                      <a class="btn btn-danger btn-sm" href="/deleteb/{{ row[0]}}" role="button">Delete</a>
+                      <a class="btn btn-warning btn-sm" href="/showprob/{{ row[0]}}" role="button">Open</a>
+                    </div>
+                  </td>
+                </tr>
+                    {% endfor %}
+                  {% endif%}   
+              </tbody>
+            </table>
+          </div>
+        </dir>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        <div id="animation">
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          
+          <section class="bar">
+            <div></div>
+            <div></div>
+            <div></div>
+          </section>
+          <div><h4>Your File is Being Uploaded</h4></div>
+        </div>
+        
+        
+
+
+    </div>
+  </div>
+
+  <script>
+    function do_something(){
+      $(animation).show();
+      
+}
+
+      
+   
+    $(document).ready(function () {
+      $(animation).hide()});
+  
+    
+  </script>
+
+</body>
+
+</html>
